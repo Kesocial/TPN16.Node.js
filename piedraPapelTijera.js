@@ -72,7 +72,7 @@ function recuperar(pedido, respuesta) {
         const formulario = querystring.parse(info);
         respuesta.writeHead(200, { "Content-Type": "text/html" });
         const pagina =
-            `<!doctype html><html><head><link rel="stylesheet" href="style.css" /><title>Yankenpón</title></head><body><div class="div">` +
+            `<!doctype html><html><head><link rel="stylesheet" href="style.css" /><title>Yankenpon</title></head><body><div class="div">` +
             piedraPapelTijera(formulario["string"]) +
             `</div></body></html>`;
         respuesta.end(pagina);
