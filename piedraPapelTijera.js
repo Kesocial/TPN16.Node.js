@@ -20,9 +20,9 @@ const servidor = http.createServer((pedido, respuesta) => {
 });
 
 var server_port = process.env.YOUR_PORT || process.env.PORT || 8888;
-var server_host = process.env.YOUR_HOST || '0.0.0.0';
+var server_host = process.env.YOUR_HOST || "0.0.0.0";
 servidor.listen(server_port, server_host, function() {
-console.log('Listening on port %d', server_port);
+    console.log("Listening on port %d", server_port);
 });
 
 function encaminar(pedido, respuesta, camino) {
@@ -72,7 +72,7 @@ function recuperar(pedido, respuesta) {
         const formulario = querystring.parse(info);
         respuesta.writeHead(200, { "Content-Type": "text/html" });
         const pagina =
-            `<!doctype html><html><head><link rel="stylesheet" href="style.css" /></head><body><div class="div">` +
+            `<!doctype html><html><head><link rel="stylesheet" href="style.css" /><title>Yankenpón</title></head><body><div class="div">` +
             piedraPapelTijera(formulario["string"]) +
             `</div></body></html>`;
         respuesta.end(pagina);
